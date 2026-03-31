@@ -30,10 +30,12 @@ const { data, error } = await supabase
 .from('usuario')
 .insert([{ texto }])
 
-res("Enviado para o banco")
+res.send("Enviado para o banco")
+
+if (error) {
+  return res.status(500).json({ error: error.message })
+}
 
 })
 
-app.listen(4245, () =>
-console.log('Rodando em http://localhost:4245')
-)
+export default app
