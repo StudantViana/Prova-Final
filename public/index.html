@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prova Final</title>
+</head>
+<style>
+header{
+    background-color: azure;
+    justify-items: center;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+main{
+    background-color:cornflowerblue;
+    justify-items: center;
+}
+
+div{
+    box-shadow: 4px, 0 , 0;
+    background-color: whitesmoke;
+}
+label{
+    font-family: Arial, Helvetica, sans-serif;
+}
+input{
+    font-family: Arial, Helvetica, sans-serif;
+}
+input:focus{
+    border-color: blue;
+}
+
+
+
+</style>
+
+<body>
+    <header>
+        <h1>Pagina de Cadastro</h1>
+    </header>
+    <main>
+        <div class="container">
+            <form action="/usuario" method="post">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Nome Completo" required>
+                <label for="celular">Celular</label>
+                <input type="text" id="celular" name="celular" placeholder="(71) 9 9999-9999" required>
+                <label for="email">E-Mail</label>
+                <input type="text" id="email" name="email" placeholder="Email@gmail.com" required>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
