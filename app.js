@@ -24,11 +24,11 @@ res.sendFile(path.join(__dirname,'public' ,'index.html'))
 
 
 app.post('/usuario', async (req, res) => {
-const { texto } = req.body
+const { nome,celular,email } = req.body
 
 const { data, error } = await supabase
 .from('usuario')
-.insert([{ texto }])
+.insert([{ nome,celular,email }])
 
 res.send("Enviado para o banco")
 
